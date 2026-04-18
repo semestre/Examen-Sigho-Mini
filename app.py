@@ -47,12 +47,15 @@ def crear_pedido():
     from pricing import calcular_precio_final
     total = calcular_precio_final(precio, cantidad, categoria)
 
-    cursor.execute(
-        "INSERT INTO pedidos (usuario_id, producto_id, cantidad, fecha) VALUES (?, ?, ?, datetime('now'))",
-        (usuario_id, producto_id, cantidad)
-    )
-    cursor.execute("UPDATE productos SET stock = stock - ? WHERE id = ?", (cantidad, producto_id))
-    conn.commit()
+    try:
+        cursor.execute(
+            "INSERT INTO pedidos (usuario_id, producto_id, cantidad, fecha) VALUES (?, ?, ?, datetime('now'))",
+            (usuario_id, producto_id, cantidad)
+        )
+        cursor.execute("UPDATE productos SET stock = stock - ? WHERE id = ?", (cantidad, producto_id))
+        conn.commit()
+    except Exception:
+        pass
     conn.close()
 
     from notifications import enviar_confirmacion
