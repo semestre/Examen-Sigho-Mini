@@ -1,8 +1,8 @@
 def calcular_precio_electronica(precio, cantidad):
     subtotal = precio * cantidad
-    if cantidad > 10:
+    if cantidad > 8:
         descuento = subtotal * 0.15
-    elif cantidad > 5:
+    elif cantidad > 4:
         descuento = subtotal * 0.10
     else:
         descuento = 0
