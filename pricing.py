@@ -1,3 +1,4 @@
+# Cálculo de precios finales por categoría de producto
 def calcular_precio_electronica(precio, cantidad):
     subtotal = precio * cantidad
     if cantidad > 8:
