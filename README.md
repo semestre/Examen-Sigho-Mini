@@ -5,6 +5,8 @@ equipo que ya no está en la empresa. Se usa en producción todos los días.
 
 Nadie recuerda por qué algunas decisiones de diseño se tomaron así.
 
+El equipo original ya no está disponible para consultas.
+
 Contiene:
 - `app.py` — servidor Flask con los endpoints principales
 - `pricing.py` — cálculo de precios por categoría de producto
