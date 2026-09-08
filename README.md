@@ -14,5 +14,3 @@ Contiene:
 - `database.sql` — esquema de la base de datos
 - `docker-compose.yml` — infraestructura de despliegue
 - `requirements.txt` — dependencias de Python
-
-<!-- ID-EXAMEN: {{TOKEN}} -->
